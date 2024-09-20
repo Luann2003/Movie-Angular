@@ -1,0 +1,32 @@
+@import "../../variables.scss";
+
+.container{
+    padding: 30px 0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.container img{
+    width: 397px;
+    height: 460px;
+    top: 149px;
+    left: 70px;
+    gap: 0px;
+    opacity: 0px;
+}
+
+.container-form{
+    background-color: $grayLight-color;
+    width: 479px;
+    height: 573px;
+    top: 108px;
+    left: 805px;
+    gap: 0px;
+    opacity: 0px;
+}
+
+form{
+
+
+}
