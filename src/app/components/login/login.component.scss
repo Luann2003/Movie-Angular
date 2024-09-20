@@ -17,16 +17,64 @@
 }
 
 .container-form{
-    background-color: $grayLight-color;
     width: 479px;
     height: 573px;
-    top: 108px;
-    left: 805px;
-    gap: 0px;
-    opacity: 0px;
+    background-color: $grayLight-color;
+    
 }
 
+.container-form h2{
+    color: white;
+    font-size: 48px;
+    font-weight: 400;
+    line-height: 65.37px;
+    text-align: center;
+    margin-top: 70px;
+
+}
 form{
-
-
+    display: flex;
+    flex-direction: column;
+    padding: 30px 40px;
+    gap: 30px;
 }
+
+form input{
+    height: 47px;
+    width: 330px;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+input::placeholder {
+    color: #999;
+    font-size: 14px;
+    opacity: 1;
+}
+
+.formulario{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+button{
+    width: 330px;
+    height: 55px;
+    margin-top: 15px;
+    background-color: $yellow-color;
+    border: none;
+    cursor: pointer;
+    transition: 0.4s;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+button:hover{
+    background-color:  #d6a903;
+    transition: 0.4s;
+}
+
+  

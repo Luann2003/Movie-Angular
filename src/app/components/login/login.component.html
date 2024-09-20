@@ -3,8 +3,13 @@
         <img src="assets/Banner-home.png" alt="">
     </div>
     <div class="container-form">
-        <form>
-
-        </form>
+        <div class="formulario">
+            <h2>Login</h2>
+            <form [formGroup]="loginForm">
+                <input type="text" placeholder="Email" formControlName="email">
+                <input type="password" placeholder="Senha" formControlName="password">
+            </form>
+            <button (click)="submit()" >FAZER LOGIN</button>
+        </div>
     </div>
 </div>
