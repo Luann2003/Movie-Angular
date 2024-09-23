@@ -9,8 +9,7 @@ import { Observable } from 'rxjs';
 export class MoviesService {
 
   url = signal(environment.apiUrl)
-
-
+  
   constructor(private httpClient: HttpClient) { }
 
   getGenre(): Observable<{ content: any[] }> {

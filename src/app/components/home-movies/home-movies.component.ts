@@ -20,6 +20,7 @@ export class HomeMoviesComponent implements OnInit{
   genres: Igenre[] = [];
   movies: Imovies[] =[];
 
+  
 
   ngOnInit(): void {
     this.loadGenres();

@@ -13,36 +13,45 @@
     height: 80px;
     background-color: $grayLight-color;
     box-shadow: 0px 4px 20px 0px #00000040;
+    padding: 10px;
 }
 
-select{
-    width: 260px;
-    height: 50px;
-    top: 15px;
-    left: 20px;
-    border-radius: 4px 0px 0px 0px;
-    border: 1px 0px 0px 0px;
-    color: white;
-    background-color: $grayLight-color;
-    border: none;
-    padding: 12px;
-    font-size: 16px;
-    font-weight: 400;
-    cursor: pointer;
-
+select {
+  width: 260px;
+  height: 50px;
+  border-radius: 4px; /* Uniformiza os cantos */
+  border: 1px solid transparent; /* Transição suave */
+  background-color: $grayLight-color;
+  color: white;
+  padding: 12px;
+  font-size: 16px;
+  font-weight: 400;
+  cursor: pointer;
+  appearance: none; /* Remove o estilo padrão */
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><polygon points="0,0 16,0 8,8" fill="white"/></svg>'); /* Adiciona uma seta customizada */
+  background-repeat: no-repeat;
+  background-position: right 10px center; /* Alinha a seta à direita */
+  background-size: 10px; /* Tamanho da seta */
+  transition: background-color 0.3s ease, border-color 0.3s ease; /* Transições suaves */
 }
 
-option{
-    color: white;
-    background-color: $grayLight-color;
-    border: none;
-    
+select:hover {
+  background-color: darken($grayLight-color, 10%); /* Escurece ao passar o mouse */
 }
 
-option:hover{
-    color: white;
-    background-color: gray;
-    border: none;
+select:focus {
+  outline: none; /* Remove o contorno padrão */
+  border-color: white; /* Adiciona contorno ao focar */
+  background-color: darken($grayLight-color, 15%); /* Escurece ao focar */
+}
+
+option {
+  color: black; /* Mudança para melhor legibilidade */
+  background-color: $grayLight-color;
+}
+
+option:hover {
+  background-color: gray; /* Melhor contraste ao passar o mouse */
 }
 
 .container-cards {
