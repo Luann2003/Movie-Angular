@@ -1,1 +1,35 @@
-<p>home-movies works!</p>
+
+<div class="container">
+    <div class="genre-container">
+        <select id="genres" (change)="onGenreChange($event)">
+            <option value="" >Escolha um gênero</option>
+            <option *ngFor="let genre of genres" [value]="genre.id">{{ genre.name }}  </option>
+        </select>
+    </div>
+
+    <div class="container-cards">
+        <div class="cards">
+            <ul>
+                <li *ngFor="let movie of movies">
+                    <div> <img [src]="movie.imgUrl" alt="{{ movie.title }}" /></div> <!-- Exibe a imagem corretamente -->
+                    <div> {{movie.title}}</div>
+                    <div> {{movie.year}}</div>
+                    <div> {{movie.subTitle}}</div>
+                </li>
+            </ul>
+        </div>      
+    </div>
+
+    <div class="pagination">
+        <button class="prev" aria-label="Previous page">&lt;</button>
+        <ul>
+          <li><button class="page active">1</button></li>
+          <li><button class="page">2</button></li>
+          <li><button class="page">3</button></li>
+          <li><span class="dots">...</span></li>
+          <li><button class="page">5</button></li>
+        </ul>
+        <button class="next" aria-label="Next page">&gt;</button>
+    </div>
+</div>
+

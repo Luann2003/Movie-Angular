@@ -1,0 +1,143 @@
+@import "../../variables.scss";
+
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.genre-container{
+    width: 1119px;
+    height: 80px;
+    background-color: $grayLight-color;
+    box-shadow: 0px 4px 20px 0px #00000040;
+}
+
+select{
+    width: 260px;
+    height: 50px;
+    top: 15px;
+    left: 20px;
+    border-radius: 4px 0px 0px 0px;
+    border: 1px 0px 0px 0px;
+    color: white;
+    background-color: $grayLight-color;
+    border: none;
+    padding: 12px;
+    font-size: 16px;
+    font-weight: 400;
+    cursor: pointer;
+
+}
+
+option{
+    color: white;
+    background-color: $grayLight-color;
+    border: none;
+    
+}
+
+option:hover{
+    color: white;
+    background-color: gray;
+    border: none;
+}
+
+.container-cards {
+    display: flex;              /* Define o layout como flexível */
+    justify-content: space-between; /* Alinha os itens ao início (pode ajustar para 'center' ou 'space-between') */
+    flex-wrap: wrap;            /* Permite que os itens "quebrem" para uma nova linha, se necessário */
+    gap: 20px;                  /* Espaçamento entre os cards */
+    padding: 10px;              /* Espaçamento interno da lista */
+  }
+  
+  .cards ul {
+    display: flex;
+    flex-wrap: wrap;            /* Permite que os itens "quebrem" para uma nova linha, se necessário */
+    list-style: none;           /* Remove os marcadores de lista */
+    padding: 0;
+    margin: 0;
+  }
+  
+  .cards li {
+    display: flex;
+    flex-direction: column;     /* Coloca os elementos de cada card em uma coluna */
+    align-items: center;        /* Centraliza o conteúdo dentro de cada card */
+    padding: 10px;              /* Adiciona espaçamento interno aos cards */
+    width: 200px;               /* Define uma largura fixa para os cards */
+    border-radius: 8px;         /* Cantos arredondados para um visual mais moderno */
+    box-shadow: 0px 4px 20px 0px #00000040;
+
+  }
+  
+  .cards img {
+    width: 100%;                /* Faz a imagem ocupar toda a largura do card */
+    height: auto;               /* Mantém a proporção da imagem */
+  }
+
+  
+  .pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background-color: #3d3d3d;
+    padding: 10px 20px;
+    border-radius: 50px;
+  }
+  
+  .pagination ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: 10px;
+  }
+  
+  .pagination li {
+    display: inline-block;
+  }
+  
+  .page {
+    background-color: #555555;
+    color: white;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .page.active {
+    background-color: #f8b916;
+  }
+  
+  .page:hover {
+    background-color: #f8b916;
+  }
+  
+  .dots {
+    color: white;
+    font-size: 20px;
+  }
+  
+  .prev,
+  .next {
+    background-color: transparent;
+    border: none;
+    color: #f8b916;
+    font-size: 20px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+  }
+  
+  .prev:hover,
+  .next:hover {
+    color: white;
+  }
+  
+  
