@@ -1,0 +1,27 @@
+<div class="container">
+  <div class="container-title" *ngIf="movie">
+      <div class="container-image">
+        <img [src]="movie.imgUrl" alt="{{ movie.title }}">
+      </div>
+      <div class="container-text">
+        <h2>{{ movie.title }}</h2>
+        <p> <span>{{ movie.year }}</span> </p>
+        <p>{{ movie.subTitle }}</p>
+
+        <div class="synopsis">
+          <p>{{ movie.synopsis }}</p>
+        </div>
+      </div>
+
+  </div>
+
+  <div class="container-post-review">
+      <input type="text" placeholder="Deixe sua avaliação aqui">
+      <button type="button">SALVAR AVALIAÇÃO</button>
+  </div>
+
+  <div class="container-reviews">
+
+  </div>
+
+</div>

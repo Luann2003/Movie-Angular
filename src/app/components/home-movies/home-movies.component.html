@@ -8,17 +8,20 @@
     </div>
 
     <div class="container-cards">
-        <div class="cards">
-            <ul>
-                <li *ngFor="let movie of movies">
-                    <div> <img [src]="movie.imgUrl" alt="{{ movie.title }}" /></div> <!-- Exibe a imagem corretamente -->
-                    <div> {{movie.title}}</div>
-                    <div> {{movie.year}}</div>
-                    <div> {{movie.subTitle}}</div>
-                </li>
-            </ul>
-        </div>      
+      <div class="cards">
+        <ul>
+          <li *ngFor="let movie of movies" (click)="getMovieId(movie.id)">
+            <div> <img [src]="movie.imgUrl" alt="{{ movie.title }}" /></div>
+            <div> {{ movie.title }}</div>
+            <div> <span>{{ movie.year }}</span></div>
+            <div class="subtitle"> {{ movie.subTitle }}</div>
+          </li>
+        </ul>
+    
+        <app-movie-id *ngIf="selectedMovie" [movie]="selectedMovie"></app-movie-id>
+      </div>
     </div>
+    
 
     <div class="pagination">
         <button class="prev" aria-label="Previous page">&lt;</button>

@@ -38,5 +38,17 @@ export class MoviesService {
     return this.httpClient.get<{ content: any[] }>(url, {headers});
   }
 
+  getMoviesById(id: number): Observable<any>{
+
+    const token = sessionStorage.getItem('auth-token');
+
+    const headers = new HttpHeaders({
+      'Authorization': `Bearer ${token}` // Adiciona o token no cabeçalho
+    });
+
+    return this.httpClient.get<{ content: any[] }>(this.url() + `/movies/${id}`, {headers});
+
+  }
+
 
 }
