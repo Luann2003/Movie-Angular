@@ -30,11 +30,11 @@ export class LoginService {
       'Authorization': 'Basic ' + btoa('myclientid:myclientsecret') // Codifica client_id e client_secret
     });
 
-    this.authStatus.next(true);
 
     return this.httpClient.post<LoginResponse>(this.url() + "/oauth2/token", body.toString(), {headers}).pipe(
       tap((value) => {
         sessionStorage.setItem("auth-token", value.access_token)
+        this.authStatus.next(true);
       })
     )
   }
