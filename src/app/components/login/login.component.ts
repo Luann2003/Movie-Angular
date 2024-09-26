@@ -11,7 +11,6 @@ interface LoginForm{
   password: FormControl;
 }
 
-
 @Component({
   selector: 'app-login',
   standalone: true,
@@ -54,5 +53,4 @@ export class LoginComponent {
     })
     this.loginForm.reset();
   }
-
 }
