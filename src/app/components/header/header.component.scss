@@ -1,5 +1,10 @@
 @import "../../variables.scss";
 
+*{
+    text-decoration: none;
+    color: inherit;
+}
+
 header{
     background-color: $yellow-color;
     padding: 5px 20px;

@@ -16,12 +16,24 @@
   </div>
 
   <div class="container-post-review">
-      <input type="text" placeholder="Deixe sua avaliação aqui">
-      <button type="button">SALVAR AVALIAÇÃO</button>
+    <form [formGroup]="reviewForm" (ngSubmit)="onSubmit()">
+      <input type="text" placeholder="Deixe sua avaliação aqui" formControlName="text">
+      <button type="submit" >SALVAR AVALIAÇÃO</button>
+    </form>
   </div>
 
   <div class="container-reviews">
-
+    <ul>
+      <li *ngFor="let review of reviews">
+        <div class="container-comment">
+          <div class="starName">
+            <p><span>&#9733;</span></p>
+            <p>  {{review.userName}} </p>
+          </div>
+          <p class="text">  {{ review.text }} </p>
+        </div>
+      </li>
+    </ul>
   </div>
 
 </div>

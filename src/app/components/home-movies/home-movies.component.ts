@@ -25,7 +25,7 @@ export class HomeMoviesComponent implements OnInit{
   movieId: number | null = null;
 
 
-  selectedMovie: Imovies | null = null; ;
+  selectedMovie: Imovies | null = null; 
 
   ngOnInit(): void {
     this.loadGenres();
