@@ -1,15 +1,18 @@
 <div class="container">
-    <div class="container-image">
-        <img src="assets/Banner-home.png" alt="">
-    </div>
+    <div class="overlay"></div>
     <div class="container-form">
-        <div class="formulario">
+        <div class="title">
             <h2>Login</h2>
+        </div>
             <form [formGroup]="loginForm">
                 <input type="text" placeholder="Email" formControlName="email">
                 <input type="password" placeholder="Senha" formControlName="password">
             </form>
             <button (click)="submit()" >FAZER LOGIN</button>
-        </div>
+            <div class="container-password">
+                <p><a href="">Esqueceu a senha?</a></p>
+            </div>
+            
+      
     </div>
 </div>
